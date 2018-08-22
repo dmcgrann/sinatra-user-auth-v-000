@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     if @user == nil 
       redirect 'sessions/login'
     else
-      session[:id] == @user.id
+      session[:id] = @user.id
       redirect '/users/home'
     end
   end
